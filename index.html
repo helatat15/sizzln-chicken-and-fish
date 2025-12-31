@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sizzln Chicken & Fish | Redford Township, MI</title>
+  <meta name="description" content="Sizzln Chicken & Fish in Redford Township, MI serves fresh fried chicken, fish, wings, shrimp, combos, and more. Order online with DoorDash or call (313) 766-5457." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sizzln Chicken & Fish | Redford Township, MI" />
+  <meta property="og:description" content="Fresh fried chicken, crispy fish, wings & shrimp. Order online with DoorDash or call (313) 766-5457." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --max: 1050px;
+      --pad: 20px;
+      --brand-red: #b30012;
+      --brand-red-dark: #8f000e;
+      --brand-yellow: #ffcc00;
+      --text: #111;
+      --muted: #555;
+      --card: #ffffff;
+      --border: #ececec;
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+      --radius: 18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.5;
+      color: var(--text);
+      background: #fff;
+    }
+    a{ color: inherit; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding:0 var(--pad); }
+
+    /* HERO */
+    header{
+      background: radial-gradient(1200px 600px at 20% 0%, #d2141f 0%, var(--brand-red) 50%, var(--brand-red-dark) 100%);
+      color:#fff;
+      padding: 28px 0 44px;
+    }
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+      padding-top: 10px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+    }
+    .brand img{
+      width: 74px; height: 74px; border-radius: 16px;
+      background:#fff; padding:8px; box-shadow: var(--shadow);
+      object-fit: contain;
+    }
+    .brand-title{
+      display:flex; flex-direction:column;
+    }
+    .brand-title strong{ font-size: 20px; letter-spacing:.3px; }
+    .brand-title span{ font-size: 13px; opacity:.9; }
+
+    .hero{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .hero h1{
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.05;
+    }
+    .hero p{
+      margin:0 0 16px;
+      max-width: 70ch;
+      color: rgba(255,255,255,.92);
+    }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top: 10px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration:none;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform .08s ease;
+      white-space: nowrap;
+    }
+    .btn:active{ transform: scale(.98); }
+    .btn.primary{ background: var(--brand-yellow); color:#111; }
+    .btn.secondary{ background: rgba(0,0,0,.18); color:#fff; border-color: rgba(255,255,255,.22); }
+    .btn.ghost{ background: rgba(255,255,255,.12); color:#fff; border-color: rgba(255,255,255,.22); }
+
+    .info-card{
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      padding: 16px;
+      backdrop-filter: blur(6px);
+    }
+    .info-card h3{ margin:0 0 8px; font-size: 16px; }
+    .info-line{ margin: 6px 0; color: rgba(255,255,255,.95); }
+    .info-line small{ opacity:.9; }
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    /* MAIN */
+    main{ padding: 34px 0; }
+    section{ padding: 22px 0; border-top: 1px solid var(--border); }
+    h2{ margin:0 0 10px; font-size: 22px; }
+    .muted{ color: var(--muted); }
+
+    .grid{ display:grid; gap:16px; grid-template-columns: repeat(12, 1fr); }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    }
+    .col-12{ grid-column: span 12; }
+    .col-6{ grid-column: span 6; }
+    .col-4{ grid-column: span 4; }
+    .col-8{ grid-column: span 8; }
+
+    .menu-group h3{ margin: 0 0 10px; }
+    .menu-list{ list-style:none; padding:0; margin:0; }
+    .menu-item{
+      display:flex; gap:12px; justify-content:space-between; align-items:baseline;
+      padding: 10px 0;
+      border-top: 1px dashed #e6e6e6;
+    }
+    .menu-item:first-child{ border-top: 0; }
+    .menu-item b{ font-size: 15px; }
+    .menu-item span{ font-weight: 800; }
+    .sub{ font-size: 12px; color:#666; margin-top: 3px; }
+
+    .map{
+      width:100%;
+      height: 420px;
+      border: 0;
+      border-radius: var(--radius);
+    }
+
+    .menu-images{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .menu-images img{
+      width:100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background:#fff;
+      object-fit: cover;
+    }
+
+    footer{
+      background:#fafafa;
+      border-top: 1px solid var(--border);
+      padding: 22px 0;
+    }
+    .tiny-seo{ font-size: 12px; color:#666; margin-top: 14px; }
+
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+      .col-6, .col-4, .col-8{ grid-column: span 12; }
+      .menu-images{ grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- LocalBusiness / Restaurant Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Sizzln Chicken & Fish",
+    "servesCuisine": ["Fried Chicken", "Seafood", "Fish"],
+    "priceRange": "$",
+    "telephone": "+13137665457",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "13550 Telegraph Rd",
+      "addressLocality": "Redford Township",
+      "addressRegion": "MI",
+      "postalCode": "48239",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.doordash.com/store/sizzln-chicken-&-fish-redford-38334241/87115581/?event_type=autocomplete&pickup=false"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">
+          <!-- Upload your logo to the repo as: logo.png -->
+          <img src="logo.png" alt="Sizzln Chicken & Fish Logo" />
+          <div class="brand-title">
+            <strong>Sizzln Chicken & Fish</strong>
+            <span>Hot. Fast. Sizzln. • Redford Township, MI</span>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="https://www.doordash.com/store/sizzln-chicken-&-fish-redford-38334241/87115581/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener">Order Online (DoorDash)</a>
+          <a class="btn secondary" href="tel:+13137665457">Call (313) 766-5457</a>
+          <a class="btn ghost" href="#directions">Directions</a>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div>
+          <h1>Fried Chicken, Fish, Wings & Shrimp in Redford Township</h1>
+          <p>
+            <strong>Sizzln Chicken & Fish</strong> serves crispy fried chicken, golden fish, jumbo shrimp, sandwiches, combos, and more —
+            fresh and made to order. Order online or stop by today.
+          </p>
+
+          <div class="pill">📍 13550 Telegraph Rd, Redford Township, MI 48239</div>
+        </div>
+
+        <div class="info-card">
+          <h3>Location & Contact</h3>
+          <div class="info-line"><strong>Address:</strong> 13550 Telegraph Rd, Redford Township, MI 48239</div>
+          <div class="info-line"><strong>Phone:</strong> <a href="tel:+13137665457">(313) 766-5457</a></div>
+          <div class="info-line"><strong>Order Online:</strong> <a href="https://www.doordash.com/store/sizzln-chicken-&-fish-redford-38334241/87115581/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener">DoorDash</a></div>
+          <div class="info-line"><small>Tip: Add this website link to your Google Business Profile to help Google recognize “Sizzln”.</small></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="menu">
+      <h2>Menu</h2>
+      <p class="muted">Prices shown are from the posted menu. For availability and updates, please call or check DoorDash.</p>
+
+      <div class="grid">
+        <!-- COMBO DEALS -->
+        <div class="card col-12 menu-group">
+          <h3>Combo Deals</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Combo #1</b><span>$15.99</span></li>
+            <div class="sub">2 Tenders + 5 pc Jumbo Shrimp + Fries & Biscuit</div>
+
+            <li class="menu-item"><b>Combo #2</b><span>$10.99</span></li>
+            <div class="sub">2 Tenders + 2 Whole Wings + Fries & Biscuit</div>
+
+            <li class="menu-item"><b>Combo #3</b><span>$9.49</span></li>
+            <div class="sub">3 Tenders + Fries & Biscuit</div>
+
+            <li class="menu-item"><b>Combo #4</b><span>$15.99</span></li>
+            <div class="sub">1 Cod, Catfish, or Tilapia + 5 pc Jumbo Shrimp + Fries & Biscuit</div>
+
+            <li class="menu-item"><b>Combo #5</b><span>$14.99</span></li>
+            <div class="sub">2 Cod, Catfish, or Tilapia + Fries & Biscuit + Small Coleslaw & Bread</div>
+
+            <li class="menu-item"><b>Combo #6</b><span>$10.99</span></li>
+            <div class="sub">5 pc Jumbo Shrimp + Fries & Biscuit</div>
+          </ul>
+        </div>
+
+        <!-- CHICKEN -->
+        <div class="card col-6 menu-group">
+          <h3>Chicken</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Whole Wings (3 pc)</b><span>$5.99</span></li>
+            <li class="menu-item"><b>Whole Wings (5 pc)</b><span>$8.99</span></li>
+            <li class="menu-item"><b>Whole Wings (10 pc)</b><span>$14.99</span></li>
+            <li class="menu-item"><b>Whole Wings (20 pc)</b><span>$25.99</span></li>
+            <li class="menu-item"><b>Whole Wings (30 pc)</b><span>$39.99</span></li>
+
+            <li class="menu-item"><b>Legs & Thighs (3 pc)</b><span>$5.99</span></li>
+            <li class="menu-item"><b>Legs & Thighs (5 pc)</b><span>$8.99</span></li>
+            <li class="menu-item"><b>Legs & Thighs (10 pc)</b><span>$14.99</span></li>
+            <li class="menu-item"><b>Legs & Thighs (20 pc)</b><span>$25.99</span></li>
+            <li class="menu-item"><b>Legs & Thighs (30 pc)</b><span>$39.99</span></li>
+
+            <li class="menu-item"><b>Wing Dings (5 pc)</b><span>$6.99</span></li>
+            <li class="menu-item"><b>Wing Dings (10 pc)</b><span>$13.99</span></li>
+            <li class="menu-item"><b>Wing Dings (20 pc)</b><span>$25.99</span></li>
+            <li class="menu-item"><b>Wing Dings (30 pc)</b><span>$38.99</span></li>
+
+            <li class="menu-item"><b>Jumbo Tenders (3 pc)</b><span>$5.99</span></li>
+            <li class="menu-item"><b>Jumbo Tenders (5 pc)</b><span>$9.99</span></li>
+            <li class="menu-item"><b>Jumbo Tenders (10 pc)</b><span>$18.99</span></li>
+            <li class="menu-item"><b>Jumbo Tenders (20 pc)</b><span>$37.99</span></li>
+            <li class="menu-item"><b>Jumbo Tenders (30 pc)</b><span>$56.99</span></li>
+          </ul>
+
+          <p class="tiny-seo">
+            Looking for <strong>Sizzln Chicken</strong> in Redford Township? Visit <strong>Sizzln Chicken & Fish</strong> for fried chicken, wings, and tenders.
+          </p>
+        </div>
+
+        <!-- FISH & SHRIMP -->
+        <div class="card col-6 menu-group">
+          <h3>Fish & Shrimp</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Cod Fillet (2 pc)</b><span>$9.49</span></li>
+            <li class="menu-item"><b>Cod Fillet (3 pc)</b><span>$13.99</span></li>
+            <li class="menu-item"><b>Cod Fillet (4 pc)</b><span>$15.99</span></li>
+            <li class="menu-item"><b>Cod Fillet (10 pc)</b><span>$39.99</span></li>
+
+            <li class="menu-item"><b>Catfish Fillet (2 pc)</b><span>$8.99</span></li>
+            <li class="menu-item"><b>Catfish Fillet (3 pc)</b><span>$11.99</span></li>
+            <li class="menu-item"><b>Catfish Fillet (4 pc)</b><span>$13.99</span></li>
+            <li class="menu-item"><b>Catfish Fillet (10 pc)</b><span>$28.99</span></li>
+
+            <li class="menu-item"><b>Tilapia Fillet (2 pc)</b><span>$7.99</span></li>
+            <li class="menu-item"><b>Tilapia Fillet (3 pc)</b><span>$10.99</span></li>
+            <li class="menu-item"><b>Tilapia Fillet (4 pc)</b><span>$12.99</span></li>
+            <li class="menu-item"><b>Tilapia Fillet (10 pc)</b><span>$27.99</span></li>
+
+            <li class="menu-item"><b>Jumbo Shrimp (5 pc)</b><span>$7.99</span></li>
+            <li class="menu-item"><b>Jumbo Shrimp (10 pc)</b><span>$13.99</span></li>
+            <li class="menu-item"><b>Jumbo Shrimp (15 pc)</b><span>$19.99</span></li>
+          </ul>
+
+          <div class="sub"><strong>Note:</strong> All come with slice of bread and choice of Sizzln sauce.</div>
+          <div class="sub"><strong>Sizzln Flavors:</strong> Lemon Pepper • Nashville • Hot Buffalo • Honey BBQ • Sizzln Sauce</div>
+        </div>
+
+        <!-- SIGNATURE -->
+        <div class="card col-6 menu-group">
+          <h3>Signature</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Chicken Sandwich (Crispy or Grilled)</b><span>$9.99</span></li>
+            <div class="sub">Lettuce, Pickles, Cheese (Tomato & Shredded Lettuce noted on menu)</div>
+
+            <li class="menu-item"><b>Cod Sandwich</b><span>$10.99</span></li>
+            <div class="sub">American Cheese, Pickles, Shredded Lettuce, Tartar Sauce</div>
+
+            <li class="menu-item"><b>Catfish Sandwich</b><span>$8.99</span></li>
+            <div class="sub">Pickles, Coleslaw, Lemon Wedge</div>
+
+            <li class="menu-item"><b>Tilapia Sandwich</b><span>$8.99</span></li>
+            <div class="sub">American Cheese, Pickles, Shredded Lettuce, Tartar Sauce</div>
+
+            <li class="menu-item"><b>OG Smash Burger</b><span>$11.99</span></li>
+            <div class="sub">American cheese, pickles, and Sizzln sauce</div>
+
+            <li class="menu-item"><b>Loaded Fries</b><span>$10.99</span></li>
+            <div class="sub">Crispy fried chicken, pickles, cheese sauce, Sizzln sauce, ranch</div>
+          </ul>
+        </div>
+
+        <!-- SIDES / BEV / DESSERT -->
+        <div class="card col-6 menu-group">
+          <h3>Sides</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Biscuit</b><span>$1.25</span></li>
+            <li class="menu-item"><b>Sizzln Fries (Small)</b><span>$2.99</span></li>
+            <li class="menu-item"><b>Sizzln Fries (Medium)</b><span>$5.99</span></li>
+            <li class="menu-item"><b>Sizzln Fries (Large)</b><span>$6.99</span></li>
+            <li class="menu-item"><b>Potato Wedges</b><span>$4.99</span></li>
+            <li class="menu-item"><b>Onion Rings</b><span>$4.99</span></li>
+            <li class="menu-item"><b>Mac n Cheese Bites (7 pc)</b><span>$3.99</span></li>
+            <li class="menu-item"><b>Jalapeño Poppers (5 pc)</b><span>$5.99</span></li>
+            <li class="menu-item"><b>Cheese Sticks (5 pc)</b><span>$4.99</span></li>
+            <li class="menu-item"><b>Coleslaw</b><span>$2.99</span></li>
+            <li class="menu-item"><b>Sauce</b><span>$0.59</span></li>
+          </ul>
+
+          <h3 style="margin-top:18px;">Beverages</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Kool Aid (21 oz)</b><span>$2.99</span></li>
+          </ul>
+
+          <h3 style="margin-top:18px;">Dessert</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>Banana Pudding</b><span>$5.99</span></li>
+            <li class="menu-item"><b>Milk Cake</b><span>$5.99</span></li>
+          </ul>
+        </div>
+
+        <!-- FAMILY TRAYS -->
+        <div class="card col-12 menu-group">
+          <h3>Family Trays</h3>
+          <ul class="menu-list">
+            <li class="menu-item"><b>50 pc Whole Wing</b><span>$54.99</span></li>
+            <li class="menu-item"><b>50 pc Legs & Thighs</b><span>$69.99</span></li>
+            <li class="menu-item"><b>50 pc Tenders</b><span>$72.99</span></li>
+            <li class="menu-item"><b>100 pc Wing Dings</b><span>$94.99</span></li>
+            <li class="menu-item"><b>20 Wings & 20 Jumbo Shrimp</b><span>$49.99</span></li>
+            <li class="menu-item"><b>20 Wings & 6 Fish</b><span>$49.99</span></li>
+          </ul>
+        </div>
+
+        <!-- OPTIONAL: MENU IMAGES -->
+        <div class="card col-12">
+          <h3>Menu Images</h3>
+          <p class="muted">Optional — upload your menu images to the repo as <code>menu-1.png</code> and <code>menu-2.png</code> to display them here.</p>
+          <div class="menu-images">
+            <img src="menu-1.png" alt="Sizzln Chicken & Fish Menu Page 1" />
+            <img src="menu-2.png" alt="Sizzln Chicken & Fish Menu Page 2" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="directions">
+      <h2>Directions</h2>
+      <div class="grid">
+        <div class="card col-6">
+          <h3 style="margin:0 0 8px;">Address</h3>
+          <p style="margin:0;">
+            <strong>Sizzln Chicken & Fish</strong><br />
+            13550 Telegraph Rd<br />
+            Redford Township, MI 48239<br />
+          </p>
+          <p style="margin:12px 0 0;">
+            <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=13550+Telegraph+Rd,+Redford+Township,+MI+48239" target="_blank" rel="noopener">Open in Google Maps</a>
+          </p>
+          <p class="tiny-seo">
+            Sizzln Chicken & Fish • Redford Township MI • fried chicken • fish • wings • shrimp • sandwiches • DoorDash
+          </p>
+        </div>
+
+        <div class="col-6">
+          <iframe
+            class="map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?output=embed&q=13550%20Telegraph%20Rd%2C%20Redford%20Township%2C%20MI%2048239">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <h2>Order Online</h2>
+      <div class="card">
+        <p class="muted" style="margin-top:0;">
+          Order Sizzln Chicken & Fish online for delivery or pickup:
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.doordash.com/store/sizzln-chicken-&-fish-redford-38334241/87115581/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener">Order on DoorDash</a>
+          <a class="btn secondary" href="tel:+13137665457">Call (313) 766-5457</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Sizzln Chicken & Fish</strong><br />
+      <span class="muted">13550 Telegraph Rd, Redford Township, MI 48239</span><br />
+      <span class="muted">Phone: </span><a href="tel:+13137665457">(313) 766-5457</a> •
+      <a href="https://www.doordash.com/store/sizzln-chicken-&-fish-redford-38334241/87115581/?event_type=autocomplete&pickup=false" target="_blank" rel="noopener">Order on DoorDash</a>
+    </div>
+  </footer>
+</body>
+</html>
