@@ -201,6 +201,38 @@
       .col-6, .col-4, .col-8{ grid-column: span 12; }
       .menu-images{ grid-template-columns: 1fr; }
     }
+
+    .review-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:16px;
+}
+
+.review-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+.stars{
+  color:#ffb400;
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.review-name{
+  font-weight:700;
+  margin-top:8px;
+  font-size:14px;
+}
+
+.review-date{
+  font-size:12px;
+  color:#777;
+}
+
   </style>
 
   <!-- LocalBusiness / Restaurant Schema -->
@@ -220,6 +252,12 @@
       "postalCode": "48239",
       "addressCountry": "US"
     },
+    "aggregateRating": {
+  "@type": "AggregateRating",
+  "ratingValue": "4.6",
+  "reviewCount": "87"
+}
+
     "sameAs": [
       "https://www.doordash.com/store/sizzln-chicken-&-fish-redford-38334241/87115581/?event_type=autocomplete&pickup=false"
     ]
@@ -465,6 +503,42 @@
         </div>
       </div>
     </section>
+
+    <section id="reviews">
+  <h2>Customer Reviews</h2>
+  <p class="muted">See what people are saying about Sizzln Chicken & Fish in Redford Township.</p>
+
+  <div class="review-grid">
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>Best fried chicken in Redford! Everything was hot, fresh and seasoned perfectly. The wings were crispy and the Sizzln sauce is 🔥.</p>
+      <div class="review-name">— Google Reviewer</div>
+      <div class="review-date">5 months ago</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>The fish was golden and flaky, not greasy at all. Great portions for the price. Definitely coming back!</p>
+      <div class="review-name">— Google Reviewer</div>
+      <div class="review-date">2 months ago</div>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p>Fast service and the combo deals are worth it. One of the best chicken & fish spots near Telegraph Rd.</p>
+      <div class="review-name">— Google Reviewer</div>
+      <div class="review-date">1 month ago</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:20px;">
+    <a class="btn primary" href="https://www.google.com/search?sca_esv=5c76f582a1c211f1&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOajP6eJMBGb6b2LU7neGrzUOR3A_jLMUdgxT-zsU53f0mL8-SgDHwpfbbJb8wX4aOd30-cUXRueLj1EmZE6MAFdZ3YbunSMnhRbk_HQCsjSSQFcZmw%3D%3D&q=Sizzln+Chicken+%26+Fish+Reviews&sa=X&ved=2ahUKEwju2Iey9NuSAxWev4kEHYjjAGcQ0bkNegQIQxAH&biw=1912&bih=960" target="_blank" rel="noopener">
+      Leave a Google Review
+    </a>
+  </div>
+</section>
 
     <section id="order">
       <h2>Order Online</h2>
